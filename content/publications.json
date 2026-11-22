@@ -1,0 +1,82 @@
+[
+  {
+    "id": "doppler-diffusion",
+    "title": "Enhancing Fourier-based Doppler Resolution with Diffusion Models",
+    "authors": [
+      "Denisa Qosja",
+      "Kilian Barth",
+      "Simon Wagner"
+    ],
+    "year": 2025,
+    "venue": "26th International Radar Symposium (IRS)",
+    "topic": "Signal enhancement",
+    "image": "doppler.svg",
+    "alt": "Conceptual comparison of unresolved and separated Doppler peaks, labelled as an illustration",
+    "summary": "Refining zero-padded range–Doppler maps with diffusion models to separate closely spaced targets.",
+    "abstract": "Limited observation time makes it difficult to distinguish targets with similar Doppler shifts. This work conditions a diffusion model on zero-padded FFT maps and learns to reconstruct more detailed range–Doppler structure. Experiments on simulated scenes compare the approach with FFT and MUSIC processing. The paper also examines failure cases where aggressive resolution enhancement introduces artificial targets.",
+    "url": "https://arxiv.org/abs/2505.17567",
+    "pdf": "https://arxiv.org/pdf/2505.17567",
+    "doi": "10.23919/IRS64527.2025.11046167",
+    "bibtex": "@inproceedings{qosja2025enhancing,\n  title={Enhancing Fourier-based Doppler Resolution with Diffusion Models},\n  author={Qosja, Denisa and Barth, Kilian and Wagner, Simon},\n  booktitle={2025 26th International Radar Symposium (IRS)},\n  year={2025},\n  doi={10.23919/IRS64527.2025.11046167}\n}"
+  },
+  {
+    "id": "sar-diffusion",
+    "title": "SAR Image Synthesis with Diffusion Models",
+    "authors": [
+      "Denisa Qosja",
+      "Simon Wagner",
+      "Daniel O’Hagan"
+    ],
+    "year": 2024,
+    "venue": "IEEE Radar Conference (RadarConf24)",
+    "topic": "Generative models",
+    "image": "sar-fid.svg",
+    "alt": "Published conditional generation FID scores: cDCGAN 3.60, cSAGAN 2.46, cWGAN 1.59, cDDPM 0.38; pretrained cDDPM 0.23",
+    "summary": "Adapting denoising diffusion models to generate synthetic SAR imagery and exploring pretraining on radar clutter.",
+    "abstract": "Radar learning is often constrained by scarce labelled imagery. This study adapts denoising diffusion probabilistic models to conditional and unconditional SAR image generation on MSTAR. It compares generated samples with GAN baselines using IS, FID, and KID. Pretraining on unlabelled clutter before fine-tuning on target images further improves the reported generation metrics.",
+    "url": "https://arxiv.org/abs/2405.07776",
+    "pdf": "https://arxiv.org/pdf/2405.07776",
+    "doi": "10.1109/RadarConf2458775.2024.10549257",
+    "bibtex": "@inproceedings{qosja2024sar,\n  title={SAR Image Synthesis with Diffusion Models},\n  author={Qosja, Denisa and Wagner, Simon and O'Hagan, Daniel},\n  booktitle={2024 IEEE Radar Conference (RadarConf24)},\n  year={2024},\n  doi={10.1109/RadarConf2458775.2024.10549257}\n}"
+  },
+  {
+    "id": "small-target-detection",
+    "title": "Small Target Detection in a Radar Surveillance System Using Contractive Autoencoders",
+    "authors": [
+      "Simon Wagner",
+      "Winfried Johannes",
+      "Denisa Qosja",
+      "Stefan Brüggenwirth"
+    ],
+    "year": 2024,
+    "venue": "IEEE Transactions on Aerospace and Electronic Systems, 60(1), 51–67",
+    "note": "Early access: 2023 · journal issue: 2024",
+    "topic": "Target detection",
+    "image": "detection.svg",
+    "alt": "Conceptual radar detection pipeline from a measured profile through background reconstruction to a residual",
+    "summary": "Learning radar background structure to detect weak targets such as drones and pedestrians.",
+    "abstract": "A contractive autoencoder learns the background of a fixed surveillance scene from measured radar profiles. Differences between the observation and reconstructed background reveal potential targets. The method is evaluated on measurements of drones and people, with improved detection at low false-alarm rates compared with background-subtraction baselines in the reported experiments.",
+    "url": "https://doi.org/10.1109/TAES.2023.3253469",
+    "doi": "10.1109/TAES.2023.3253469",
+    "bibtex": "@article{wagner2024small,\n  title={Small Target Detection in a Radar Surveillance System Using Contractive Autoencoders},\n  author={Wagner, Simon and Johannes, Winfried and Qosja, Denisa and Br{\\\"u}ggenwirth, Stefan},\n  journal={IEEE Transactions on Aerospace and Electronic Systems},\n  volume={60},\n  number={1},\n  pages={51--67},\n  year={2024},\n  doi={10.1109/TAES.2023.3253469}\n}"
+  },
+  {
+    "id": "sar-classification",
+    "title": "Benchmarking Convolutional Neural Network Backbones for Target Classification in SAR",
+    "authors": [
+      "Denisa Qosja",
+      "Simon Wagner",
+      "Stefan Brüggenwirth"
+    ],
+    "year": 2023,
+    "venue": "IEEE Radar Conference (RadarConf23)",
+    "topic": "Target recognition",
+    "image": "classification.svg",
+    "alt": "Conceptual SAR classification workflow comparing convolutional backbones and data augmentation",
+    "summary": "Comparing ConvNeXt with earlier CNN backbones across three SAR datasets and investigating radar data augmentation.",
+    "abstract": "This work examines how modern convolutional image-recognition backbones transfer to SAR target classification. ConvNeXt is compared with earlier architectures on three SAR datasets, alongside an evaluation of training-data augmentation. The study reports stronger recognition performance for ConvNeXt in its experiments and investigates which augmentations suit radar imagery.",
+    "url": "https://doi.org/10.1109/RadarConf2351548.2023.10149802",
+    "doi": "10.1109/RadarConf2351548.2023.10149802",
+    "bibtex": "@inproceedings{qosja2023benchmarking,\n  title={Benchmarking Convolutional Neural Network Backbones for Target Classification in SAR},\n  author={Qosja, Denisa and Wagner, Simon and Br{\\\"u}ggenwirth, Stefan},\n  booktitle={2023 IEEE Radar Conference (RadarConf23)},\n  pages={1--6},\n  year={2023},\n  doi={10.1109/RadarConf2351548.2023.10149802}\n}"
+  }
+]

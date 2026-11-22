@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="483.12pt" height="302.688pt" viewBox="0 0 483.12 302.688" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 302.688 
+L 483.12 302.688 
+L 483.12 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 12.35592 180.1728 
+L 89.226 180.1728 
+Q 92.97576 180.1728 92.97576 176.452955 
+L 92.97576 112.285626 
+Q 92.97576 108.565781 89.226 108.565781 
+L 12.35592 108.565781 
+Q 8.60616 108.565781 8.60616 112.285626 
+L 8.60616 176.452955 
+Q 8.60616 180.1728 12.35592 180.1728 
+z
+" clip-path="url(#p34975f44a0)" style="fill: #edf4f7; stroke: #bbceda; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 106.56864 180.1728 
+L 183.43872 180.1728 
+Q 187.18848 180.1728 187.18848 176.452955 
+L 187.18848 112.285626 
+Q 187.18848 108.565781 183.43872 108.565781 
+L 106.56864 108.565781 
+Q 102.81888 108.565781 102.81888 112.285626 
+L 102.81888 176.452955 
+Q 102.81888 180.1728 106.56864 180.1728 
+z
+" clip-path="url(#p34975f44a0)" style="fill: #edf4f7; stroke: #bbceda; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 200.78136 180.1728 
+L 277.65144 180.1728 
+Q 281.4012 180.1728 281.4012 176.452955 
+L 281.4012 112.285626 
+Q 281.4012 108.565781 277.65144 108.565781 
+L 200.78136 108.565781 
+Q 197.0316 108.565781 197.0316 112.285626 
+L 197.0316 176.452955 
+Q 197.0316 180.1728 200.78136 180.1728 
+z
+" clip-path="url(#p34975f44a0)" style="fill: #edf4f7; stroke: #bbceda; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 294.99408 180.1728 
+L 371.86416 180.1728 
+Q 375.61392 180.1728 375.61392 176.452955 
+L 375.61392 112.285626 
+Q 375.61392 108.565781 371.86416 108.565781 
+L 294.99408 108.565781 
+Q 291.24432 108.565781 291.24432 112.285626 
+L 291.24432 176.452955 
+Q 291.24432 180.1728 294.99408 180.1728 
+z
+" clip-path="url(#p34975f44a0)" style="fill: #edf4f7; stroke: #bbceda; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 389.2068 180.1728 
+L 466.07688 180.1728 
+Q 469.82664 180.1728 469.82664 176.452955 
+L 469.82664 112.285626 
+Q 469.82664 108.565781 466.07688 108.565781 
+L 389.2068 108.565781 
+Q 385.45704 108.565781 385.45704 112.285626 
+L 385.45704 176.452955 
+Q 385.45704 180.1728 389.2068 180.1728 
+z
+" clip-path="url(#p34975f44a0)" style="fill: #edf4f7; stroke: #bbceda; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 500; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #164d77" x="9.5436" y="30.449032" transform="rotate(-0 9.5436 30.449032)">From waveform to range–Doppler map</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #164d77" x="50.79096" y="140.252432" transform="rotate(-0 50.79096 140.252432)">Waveform</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #566575" x="50.79096" y="162.981855" transform="rotate(-0 50.79096 162.981855)">chirp pulses</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 95.210419 144.36929 
+Q 97.898293 144.36929 98.909117 144.36929 
+" style="fill: none; stroke: #177b80; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 94.109117 141.96929 
+L 98.909117 144.36929 
+L 94.109117 146.76929 
+" style="fill: none; stroke: #177b80; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #164d77" x="145.00368" y="140.252432" transform="rotate(-0 145.00368 140.252432)">Transmit</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #566575" x="145.00368" y="162.981855" transform="rotate(-0 145.00368 162.981855)">TX chain</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 189.423139 144.36929 
+Q 192.111013 144.36929 193.121837 144.36929 
+" style="fill: none; stroke: #177b80; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 188.321837 141.96929 
+L 193.121837 144.36929 
+L 188.321837 146.76929 
+" style="fill: none; stroke: #177b80; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #164d77" x="239.2164" y="140.252432" transform="rotate(-0 239.2164 140.252432)">Channel</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #566575" x="239.2164" y="162.981855" transform="rotate(-0 239.2164 162.981855)">propagation</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 283.635859 144.36929 
+Q 286.323733 144.36929 287.334557 144.36929 
+" style="fill: none; stroke: #177b80; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 282.534557 141.96929 
+L 287.334557 144.36929 
+L 282.534557 146.76929 
+" style="fill: none; stroke: #177b80; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #164d77" x="333.42912" y="140.252432" transform="rotate(-0 333.42912 140.252432)">Receive</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #566575" x="333.42912" y="162.981855" transform="rotate(-0 333.42912 162.981855)">RX chain</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 377.848579 144.36929 
+Q 380.536453 144.36929 381.547277 144.36929 
+" style="fill: none; stroke: #177b80; stroke-width: 1.5; stroke-linecap: round"/>
+    <path d="M 376.747277 141.96929 
+L 381.547277 144.36929 
+L 376.747277 146.76929 
+" style="fill: none; stroke: #177b80; stroke-width: 1.5; stroke-linecap: round"/>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #164d77" x="427.64184" y="140.252003" transform="rotate(-0 427.64184 140.252003)">Process</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #566575" x="427.64184" y="162.981855" transform="rotate(-0 427.64184 162.981855)">range / Doppler</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #566575" transform="translate(9.5436 217.565419)">Modular pulse-radar simulation in PyTorch.</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; fill: #566575" transform="translate(9.5436 237.365419)">System and scenario parameters are configured in YAML.</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #177b80" x="9.5436" y="276.888774" transform="rotate(-0 9.5436 276.888774)">Conceptual method overview</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p34975f44a0">
+   <rect x="7.2" y="7.2" width="468.72" height="288.288"/>
+  </clipPath>
+ </defs>
+</svg>

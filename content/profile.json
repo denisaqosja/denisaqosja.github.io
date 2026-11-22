@@ -1,0 +1,25 @@
+{
+  "name": "Denisa Qosja",
+  "role": "Research Scientist",
+  "affiliation": "Fraunhofer FHR",
+  "email": "denisaqosja97@gmail.com",
+  "github": "https://github.com/denisaqosja",
+  "scholar": "https://scholar.google.com/citations?user=yeD9RRkAAAAJ&hl=en",
+  "orcid": "https://orcid.org/0000-0003-3083-8253",
+  "linkedin": "https://de.linkedin.com/in/denisa-qosja-45aba4197",
+  "intro": "I work at the intersection of machine learning and signal analysis, developing methods that help us extract more information from radar and remote sensing data.",
+  "bio": "As a research scientist at Fraunhofer FHR, my work spans target detection and recognition, complex-valued neural networks, and generative models for signal enhancement and synthetic SAR imagery. My projects also explore semantic segmentation of Sentinel-2 satellite images.",
+  "interests": ["Radar signal processing", "Generative models", "Complex-valued learning", "Remote sensing"],
+  "experience": [
+    {"dates": "February 2022 – present", "role": "Research Scientist", "institution": "Fraunhofer Institute for High Frequency Physics and Radar Techniques FHR", "location": "Wachtberg, Germany", "description": "Research on machine learning for radar: small-target detection, SAR target classification, complex-valued reconstruction, diffusion-based signal enhancement, and synthetic data generation."},
+    {"dates": "February – September 2021", "role": "Student Research Assistant", "institution": "Fraunhofer Institute for Integrated Circuits IIS", "location": "Erlangen, Germany", "description": "Created JPEG XS test codestreams, maintained software integration, and developed algorithms for HDR coding."},
+    {"dates": "November 2020 – January 2021", "role": "Student Research Assistant", "institution": "Chair of Multimedia Communications and Signal Processing, FAU", "location": "Erlangen, Germany", "description": "Supported students implementing image and video signal processing algorithms in Python and assessed their weekly work."},
+    {"dates": "July – October 2020", "role": "Research Intern", "institution": "Fraunhofer Institute for Integrated Circuits IIS", "location": "Erlangen, Germany", "description": "Used CARLA to generate paired RGB images and depth maps across driving and weather scenarios, with PyTorch data pipelines for depth estimation."}
+  ],
+  "education": [
+    {"dates": "2018 – 2021", "degree": "M.Sc. Communications and Multimedia Engineering", "institution": "Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)", "location": "Erlangen, Germany", "description": "Thesis: Novel View Synthesis from RGB+D Light-Field Data for Reproduction of View-Dependent Effects."},
+    {"dates": "2015 – 2018", "degree": "B.Sc. Electronics and Communications Engineering", "institution": "Epoka University", "location": "Tirana, Albania", "description": ""}
+  ],
+  "skills": {"Programming": "Python, MATLAB, C++", "Machine learning": "PyTorch, NumPy, scikit-learn", "Imaging & analysis": "OpenCV, Matplotlib, Pillow", "Development": "Git, Docker"},
+  "languages": "Albanian (native), English (C1), German (B1), Spanish (intermediate)"
+}

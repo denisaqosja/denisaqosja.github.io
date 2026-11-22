@@ -1,0 +1,66 @@
+[
+  {
+    "id": "complex-valued",
+    "title": "Complex-valued neural networks",
+    "subtitle": "Learning with magnitude and phase",
+    "tags": [
+      "PyTorch",
+      "Complex-valued U-Net",
+      "Radar"
+    ],
+    "image": "complex-network.svg",
+    "alt": "Complex-valued reconstruction diagram: real and imaginary inputs, complex U-Net, magnitude and phase outputs",
+    "caption": "Conceptual architecture overview, redrawn for this website.",
+    "abstract": "Radar signals carry information in both magnitude and phase. This project implements complex-valued convolutional networks for range–Doppler map reconstruction, with real-valued and complex-valued U-Net variants. A configurable training and evaluation pipeline supports measured radar data, experiment logging, and analysis of reconstruction fidelity.",
+    "details": [
+      "Complex-valued convolutions and U-Net reconstruction.",
+      "Real-valued baseline for architectural comparison.",
+      "Magnitude, phase, and complex-correlation analysis, with TensorBoard logging."
+    ],
+    "repo": "https://github.com/denisaqosja/ComplexValuedNN",
+    "results": "https://github.com/denisaqosja/ComplexValuedNN/blob/main/Results.md",
+    "related": "doppler-diffusion"
+  },
+  {
+    "id": "sentinel-segmentation",
+    "title": "Sentinel-2 semantic segmentation",
+    "subtitle": "From optical imagery to land-cover maps",
+    "tags": [
+      "Remote sensing",
+      "DINOv3",
+      "SegFormer"
+    ],
+    "image": "sentinel-ground-truth.jpg",
+    "alt": "Four Sentinel-2 RGB image patches with their corresponding DFC2020 ground-truth land-cover masks and class legend",
+    "caption": "Sentinel-2 RGB patches paired with DFC2020 ground-truth land-cover annotations. Source: the local project’s dataset visualization.",
+    "abstract": "This project adapts pretrained vision models for land-cover segmentation of Sentinel-2 optical imagery. DINOv3 and SegFormer are fine-tuned using curated DFC2020 annotations, with the goal of applying the resulting models to the optical component of SEN12MS. The work includes reflectance analysis, normalization, paired augmentation, and geographically separated training and validation regions.",
+    "details": [
+      "RGB inputs from Sentinel-2 bands B04, B03, and B02.",
+      "Eight land-cover classes, including forest, cropland, built-up areas, and water.",
+      "Training and validation tooling with model-freezing controls and experiment logging; broader SEN12MS inference is a project goal."
+    ],
+    "repo": "https://github.com/denisaqosja/Sentinel_SEN12MS_Segmentation"
+  },
+  {
+    "id": "radar-simulation",
+    "title": "Radar signal processing",
+    "subtitle": "A pulse-radar simulation, end to end",
+    "tags": [
+      "PyTorch",
+      "Signal processing",
+      "Simulation"
+    ],
+    "image": "radar-pipeline.svg",
+    "alt": "Pulse radar pipeline showing waveform generation, transmission, propagation, receiver, and range-Doppler processing",
+    "caption": "Conceptual overview of the repository’s processing chain.",
+    "abstract": "An end-to-end pulse-radar simulation implemented in PyTorch. The pipeline connects chirp waveform generation, transmission, free-space propagation, receiver processing, and range–Doppler analysis. YAML-based configuration and exploratory notebooks make it possible to inspect the waveform and processing stages separately.",
+    "details": [
+      "Modular waveform, transmitter, channel, receiver, and signal-processing components.",
+      "Configuration-driven radar and scenario parameters.",
+      "Exploratory notebooks for waveform generation and filtering."
+    ],
+    "repo": "https://github.com/denisaqosja/RadarSignalProcessing",
+    "related": "doppler-diffusion",
+    "interactive": true
+  }
+]
