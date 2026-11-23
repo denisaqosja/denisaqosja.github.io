@@ -2,6 +2,8 @@
 
 ## Profile and background
 
+- The About text and professional headline are supplied verbatim by the user in the November 23, 2026 revision. Paragraph breaks are added for readability.
+
 - The user’s local English CV, `ResumeDenisaQosja.pdf` (March 2026): work history, degree titles, thesis title, and skills. The original PDF is not copied into the published site.
 - [Public ORCID record](https://orcid.org/0000-0003-3083-8253): cross-check of employment, education, and publication identity.
 - [Google Scholar profile supplied by the user](https://scholar.google.com/citations?user=yeD9RRkAAAAJ&hl=en): linked directly. Automated access was rate-limited, so publication content was verified through the papers, DOI records, and local bibliography instead. No citation counts were inferred.
@@ -33,5 +35,8 @@ Project-to-publication links indicate related research, not a claim that a repos
 
 ## Design references
 
-- [Mario Qosja’s homepage](https://qosmar.github.io/), inspected through its [public HTML source](https://github.com/qosmar/qosmar.github.io/blob/main/index.html): compact academic structure, restrained blue palette, clear biography and CV access.
-- [Angel Villar-Corrales’s publications page](http://angelvillarcorrales.com/publications), supplied by the user. The live page could not be fetched during this session; the website follows the requested academic publication-list direction without copying that page’s design or content.
+- [Angel Villar-Corrales’s homepage](https://angelvillarcorrales.com/), inspected from its live HTML and stylesheet on November 23, 2026: compact biography, portrait beside the profile, restrained typography, and publication rows.
+- [Ilyes Jaouedi’s portfolio](https://ilyes-jaouedi.github.io/), inspected from its live HTML and stylesheet on November 23, 2026: compact top navigation, an initials brand, title-case navigation links, and a mobile menu.
+- [Mario Qosja’s homepage](https://qosmar.github.io/) informed an earlier header revision. The current design follows the newer references above.
+
+All site markup and CSS are independently implemented. The references’ biographical text and research content are not included.

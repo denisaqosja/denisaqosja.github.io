@@ -1,8 +1,8 @@
 # Denisa Qosja — research portfolio
 
-A responsive academic website for GitHub Pages: profile, publications, three detailed code projects, and a downloadable public CV. Inspired by the compact academic structure of Mario Qosja’s homepage and the user’s request for a visual publication list.
+A responsive academic website for GitHub Pages: profile, publications, three detailed code projects, and a public CV that opens in a new tab. The current design combines a compact academic profile inspired by Angel Villar-Corrales’s homepage with top navigation inspired by Ilyes Jaouedi’s portfolio.
 
-The site works without a framework, runtime dependencies, accounts, or third-party assets. All essential content and navigation work without JavaScript. JavaScript adds publication filtering, citation copying, and an illustrative Doppler response slider.
+The site works without a framework, runtime dependencies, accounts, or third-party assets. All essential content and navigation work without JavaScript. JavaScript adds a mobile navigation menu, publication filtering, citation copying, and an illustrative Doppler response slider.
 
 ## Preview
 
@@ -16,28 +16,25 @@ Open `http://localhost:8000`, or open `dist/index.html` directly. Direct file op
 
 ## Publish on GitHub
 
-The included workflow builds and checks the site, then deploys only `dist/` to GitHub Pages.
+Source repository: [denisaqosja/denisaqosja.github.io](https://github.com/denisaqosja/denisaqosja.github.io).
 
-1. Create a repository named `denisaqosja.github.io` under `denisaqosja` for the account’s main website. If a repository with that name already exists, inspect and preserve its content before integrating this project.
-2. Upload this project’s source, including `.github/workflows/pages.yml`, or push it using Git. Do not upload the parent directory containing private documents.
-3. In the repository’s **Settings → Pages → Build and deployment**, choose **GitHub Actions** as the source.
-4. Push to `main`, or run **Deploy portfolio to GitHub Pages** from the Actions tab. Wait for a successful deployment before treating the website as live.
+The included workflow builds and checks the site, then deploys only `dist/` to GitHub Pages. Publishing uses **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
-The expected account-site address is `https://denisaqosja.github.io/`; this address is a deployment target, not a claim that it has been published. The site also supports project repositories because all local links are relative.
+Push source changes to `main` to deploy an update, or run **Deploy portfolio to GitHub Pages** from the Actions tab. Wait for a successful deployment before treating an update as live. The account-site address is `https://denisaqosja.github.io/`.
 
-Publishing setup follows [GitHub’s Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+Publishing setup follows [GitHub’s Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site). All local site links are relative, so the generated site can also be hosted in a project repository or opened locally.
 
 ## Update content
 
 | File | Purpose |
 | --- | --- |
-| `content/profile.json` | Bio, links, work history, education, skills |
+| `content/profile.json` | User-authored About paragraphs, headline, links, work history, education, skills |
 | `content/publications.json` | Publication metadata, summaries, links, BibTeX |
 | `content/projects.json` | Project abstracts, repository links, descriptions, figures |
 | `web/styles.css` | Typography, colors, responsive layouts, print styles |
 | `web/main.js` | Publication search, citation copy, Doppler illustration |
 | `scripts/build.py` | Generates the four complete HTML pages and bibliography |
-| `assets/` | Local photographs, diagrams, chart, and downloadable CV |
+| `assets/` | Local photographs, diagrams, chart, and CV PDF for viewing in a new tab |
 
 After editing, run the build and check commands. Push source changes to `main`; the workflow generates the published HTML. Generated `dist/` and temporary files are ignored by Git.
 

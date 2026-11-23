@@ -1,4 +1,26 @@
 'use strict';
+const menuToggle = document.querySelector('.nav-toggle');
+const mainNavigation = document.querySelector('#main-navigation');
+if (menuToggle && mainNavigation) {
+  const setMenuOpen = open => {
+    mainNavigation.dataset.open = String(open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+  };
+  menuToggle.addEventListener('click', () => {
+    setMenuOpen(menuToggle.getAttribute('aria-expanded') !== 'true');
+  });
+  mainNavigation.addEventListener('click', event => {
+    if (event.target.closest('a')) setMenuOpen(false);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+      setMenuOpen(false);
+      menuToggle.focus();
+    }
+  });
+  setMenuOpen(false);
+  document.querySelector('.site-header').classList.add('menu-ready');
+}
 const search = document.querySelector('#paper-search');
 if (search) {
   search.addEventListener('input', () => {
