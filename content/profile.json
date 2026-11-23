@@ -10,10 +10,10 @@
   "intro": "I work at the intersection of machine learning and signal analysis, developing methods that help us extract more information from radar and remote sensing data.",
   "bio": "As a research scientist at Fraunhofer FHR, my work spans target detection and recognition, complex-valued neural networks, and generative models for signal enhancement and synthetic SAR imagery. My projects also explore semantic segmentation of Sentinel-2 satellite images.",
   "interests": [
-    "Radar signal processing",
-    "Computer vision",
-    "Generative models",
-    "Multimodal learning"
+    "Radar Signal Processing",
+    "Computer Vision",
+    "Generative Models",
+    "Multimodal Learning"
   ],
   "experience": [
     {
