@@ -2,7 +2,7 @@
 
 ## Profile and background
 
-- The About text and professional headline are supplied verbatim by the user in the November 23, 2026 revision. Paragraph breaks are added for readability.
+- The About text, professional headline, and four technical skill categories are supplied by the user in the November 23, 2026 revisions. Paragraph breaks are added to the About text for readability.
 
 - The user’s local English CV, `ResumeDenisaQosja.pdf` (March 2026): work history, degree titles, thesis title, and skills. The original PDF is not copied into the published site.
 - [Public ORCID record](https://orcid.org/0000-0003-3083-8253): cross-check of employment, education, and publication identity.

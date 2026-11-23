@@ -62,10 +62,10 @@
     }
   ],
   "skills": {
-    "Programming": "Python, MATLAB, C++",
-    "Machine learning": "PyTorch, NumPy, scikit-learn",
-    "Imaging & analysis": "OpenCV, Matplotlib, Pillow",
-    "Development": "Git, Docker"
+    "Radar Signal Processing": "Digital and statistical signal processing, range compression, Doppler processing, range-Doppler analysis, CFAR detection, time-frequency analysis and performance evaluation.",
+    "Machine Learning": "Image classification, object detection, semantic segmentation, CNNs, Transformers, generative AI, complex-valued neural networks, and multimodal learning.",
+    "Frameworks and languages": "Python, MATLAB, NumPy, SciPy, OpenCV, PyTorch, scikit-learn.",
+    "Development Tools": "Git, Docker, Conda, Linux, CUDA, GPU computing."
   },
   "languages": "Albanian (native), English (C1), German (B1), Spanish (intermediate)",
   "headline": "Radar Signal Processing and AI Engineer",
