@@ -47,12 +47,10 @@ def timeline(items, education=False):
 def render(file, title, content):
     navigation = [
         ('index.html#about', 'About', 'index.html'),
-        ('index.html#research', 'Research', None),
-        ('publications.html', 'Publications', 'publications.html'),
         ('cv.html#experience', 'Experience', 'cv.html'),
         ('projects.html', 'Projects', 'projects.html'),
         ('cv.html#skills', 'Skills', None),
-        ('index.html#contact', 'Contact', None),
+        ('publications.html', 'Publications', 'publications.html'),
     ]
     nav = ''.join(f'<a href="{href}"'+(' aria-current="page"' if current == file else '')+f'>{label}</a>' for href,label,current in navigation)
     nav += link('assets/Denisa-Qosja-CV.pdf', 'CV', new_tab=True)
