@@ -70,8 +70,7 @@
   "languages": "Albanian (native), English (C1), German (B1), Spanish (intermediate)",
   "headline": "Radar Signal Processing and AI Engineer",
   "about": [
-    "I am a Radar Signal Processing and AI Engineer with over four years of experience in applied research at Fraunhofer FHR. My work focuses on developing signal processing and machine learning algorithms for radar sensing, target detection and classification, and AI-based perception.",
-    "I have worked extensively with radar data representations, including Range–Doppler maps, micro-Doppler spectrograms, and Synthetic Aperture Radar (SAR) imagery, applying both classical signal processing techniques and modern deep learning approaches.",
-    "My research interests include computer vision, generative models, and multimodal learning."
+    "I am a Radar Signal Processing and AI Engineer with over four years of experience in applied research at Fraunhofer FHR, focusing on combining signal processing and machine learning to advance radar sensing and AI-based perception. A large part of my research has focused on detecting and characterizing small targets in challenging environments, working with various radar data representations, including high-resolution range profiles (HRRP), range–Doppler maps, and micro-Doppler spectrograms.",
+    "Another important focus has been addressing the limited availability of labeled radar data through synthetic data generation, particularly using generative models to improve target recognition and model generalization. I am also interested in multimodal learning, combining the complementary strengths of radar and optical sensors to develop more robust perception systems across varying environmental conditions."
   ]
 }
