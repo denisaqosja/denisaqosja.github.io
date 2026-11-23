@@ -20,7 +20,7 @@ class Page(HTMLParser):
         if tag=='h1':self.h1+=1
         if tag=='main':self.main+=1
         if tag=='html':assert a.get('lang')=='en'
-        if tag=='img':assert a.get('alt'),f'Missing image description: {self.path.name}'
+        if tag=='img':assert 'alt' in a and (a['alt'] or a.get('aria-hidden')=='true'),f'Missing image description: {self.path.name}'
         for attr in ['href','src']:
             if a.get(attr):self.links.append(a[attr])
 pages={p.resolve():Page(p) for p in OUT.glob('*.html')}
@@ -38,7 +38,7 @@ for path,page in pages.items():
         if url.fragment and target in pages:
             assert unquote(url.fragment) in pages[target].ids,f'Broken fragment: {href}'
         checked+=1
-for path in (OUT/'assets').glob('*.svg'):ET.parse(path)
+for path in (OUT/'assets').rglob('*.svg'):ET.parse(path)
 pubs=json.loads((ROOT/'content/publications.json').read_text())
 assert len({p['id'] for p in pubs})==len(pubs)
 for p in pubs:

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the complete, dependency-free GitHub Pages site from editable JSON."""
 import html
+import hashlib
 import json
 import shutil
 from pathlib import Path
@@ -17,13 +18,14 @@ def link(url, label, cls='', new_tab=False):
     attributes = ' target="_blank" rel="noopener noreferrer"' if new_tab else ''
     hint = '<span class="sr-only"> (opens in a new tab)</span>' if new_tab else ''
     return f'<a class="{cls}" href="{e(url)}"{attributes}>{e(label)}{hint}</a>'
-def social_icon(url, label):
-    icons = {
-        'Email': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
-        'LinkedIn': '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
-        'GitHub': '<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
-    }
-    return f'<a class="social-icon" href="{e(url)}" aria-label="{e(label)}" title="{e(label)}">{icons[label]}</a>'
+def asset_version(path):
+    return hashlib.sha256((ROOT / path).read_bytes()).hexdigest()[:12]
+def profile_icon(url, label, new_tab=False):
+    filenames = {'Email': 'email', 'LinkedIn': 'linkedin', 'GitHub': 'github', 'Google Scholar': 'scholar', 'CV': 'cv'}
+    path = 'assets/icons/' + filenames[label] + '.svg'
+    hint = ' (PDF, opens in a new tab)' if label == 'CV' else ''
+    attributes = ' target="_blank" rel="noopener noreferrer"' if new_tab else ''
+    return f'<a class="profile-resource" href="{e(url)}" aria-label="{e(label + hint)}" title="{e(label + hint)}"{attributes}><img src="{path}?v={asset_version(path)}" width="24" height="24" alt="" aria-hidden="true"></a>'
 def tags(items):
     return '<ul class="tags">' + ''.join(f'<li>{e(x)}</li>' for x in items) + '</ul>'
 def heading(kicker, title, intro=''):
@@ -58,12 +60,12 @@ def render(file, title, content):
     (OUT/file).write_text(f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{description}"><meta name="theme-color" content="#163f62"><meta property="og:title" content="{e(title)} | Denisa Qosja"><meta property="og:description" content="{description}"><meta property="og:type" content="website">
-<title>{e(title)} | Denisa Qosja</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css"><script src="assets/main.js" defer></script></head>
+<title>{e(title)} | Denisa Qosja</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v={asset_version('web/styles.css')}"><script src="assets/main.js?v={asset_version('web/main.js')}" defer></script></head>
 <body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="index.html" aria-label="Denisa Qosja home">DQ<span>.</span></a><button class="nav-toggle" type="button" aria-controls="main-navigation" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Menu</span></button><nav id="main-navigation" class="site-nav" aria-label="Main navigation">{nav}</nav></div></header>
 <main id="main" class="container">{content}</main>
 <footer class="site-footer container"><span>© 2026 Denisa Qosja</span><div>{link(p['scholar'],'Google Scholar')}{link(p['github'],'GitHub')}{link(p['orcid'],'ORCID')}</div><span>Updated November 2026</span></footer><p class="sr-only" id="announcement" role="status" aria-live="polite"></p></body></html>''')
 
-home = f'''<section id="about" class="profile" aria-labelledby="name"><div class="profile-heading"><p class="eyebrow">About me</p><h1 id="name">{e(p['name'])}</h1><p class="profile-role">{e(p['headline'])}<span aria-hidden="true"> · </span>{link('https://www.fhr.fraunhofer.de/en.html',p['affiliation'])}</p></div><img class="profile-photo" src="assets/denisa-qosja.jpg" alt="Portrait of Denisa Qosja" width="640" height="720" fetchpriority="high"><div class="profile-bio">{''.join('<p>'+e(paragraph)+'</p>' for paragraph in p['about'])}<div id="research" class="profile-keywords" aria-label="Research keywords">{tags(p['interests'])}</div></div><div class="profile-meta"><div class="profile-links"><div class="social-icons">{social_icon('mailto:'+p['email'],'Email')}{social_icon(p['linkedin'],'LinkedIn')}{social_icon(p['github'],'GitHub')}</div>{link(p['scholar'],'Google Scholar')}{link('assets/Denisa-Qosja-CV.pdf','View CV','resource-link',new_tab=True)}</div></div></section>
+home = f'''<section id="about" class="profile" aria-labelledby="name"><div class="profile-heading"><p class="eyebrow">About me</p><h1 id="name">{e(p['name'])}</h1><p class="profile-role">{e(p['headline'])}<span aria-hidden="true"> · </span>{link('https://www.fhr.fraunhofer.de/en.html',p['affiliation'])}</p></div><img class="profile-photo" src="assets/denisa-qosja.jpg" alt="Portrait of Denisa Qosja" width="640" height="720" fetchpriority="high"><div class="profile-bio">{''.join('<p>'+e(paragraph)+'</p>' for paragraph in p['about'])}<div id="research" class="profile-keywords" aria-label="Research keywords">{tags(p['interests'])}</div></div><div class="profile-meta"><nav class="profile-resources" aria-label="Profile links">{profile_icon('mailto:'+p['email'],'Email')}{profile_icon(p['scholar'],'Google Scholar',new_tab=True)}{profile_icon(p['github'],'GitHub',new_tab=True)}{profile_icon(p['linkedin'],'LinkedIn',new_tab=True)}{profile_icon('assets/Denisa-Qosja-CV.pdf','CV',new_tab=True)}</nav></div></section>
 <section class="section"><div class="section-title"><div><p class="eyebrow">Recent work</p><h2>Selected publications</h2></div>{link('publications.html','All publications','section-link')}</div>{''.join(pub_row(x,True) for x in pubs[:2])}</section>
 <section class="section"><div class="section-title"><div><p class="eyebrow">From research to code</p><h2>Open-source projects</h2></div>{link('projects.html','Explore projects','section-link')}</div><div class="project-index">{''.join(f'<a href="projects.html#{x["id"]}"><h3>{e(x["title"])}</h3><p>{e(x["subtitle"])}</p><span>View project</span></a>' for x in projects)}</div></section>
 <section class="section background-section"><div><h2>Background</h2><p>I joined Fraunhofer FHR in 2022 after completing my master’s at FAU Erlangen-Nürnberg. My earlier work at Fraunhofer IIS explored synthetic visual data, depth estimation, and image coding.</p>{link('cv.html','Education & experience','section-link')}</div><div id="contact" class="contact-note"><h2>Get in touch</h2><p>For research discussions and collaboration:</p>{link('mailto:'+p['email'],p['email'])}<p class="small">{link(p['linkedin'],'LinkedIn')} · {link(p['orcid'],'ORCID')}</p></div></section>'''
