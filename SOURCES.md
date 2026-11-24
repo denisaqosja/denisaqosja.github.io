@@ -4,9 +4,10 @@
 
 - The About text, professional headline, and four technical skill categories are supplied by the user in the November 23, 2026 revisions. Paragraph breaks are added to the About text for readability.
 
-- The user’s local English CV, `ResumeDenisaQosja.pdf` (March 2026): work history, degree titles, thesis title, and skills. The original PDF is not copied into the published site.
+- The user’s local English CV, `ResumeDenisaQosja.pdf` (March 2026): work history, degree titles, thesis title, and skills. This older file informed the initial website profile; it is not the currently published CV.
 - [Public ORCID record](https://orcid.org/0000-0003-3083-8253): cross-check of employment, education, and publication identity.
 - [Google Scholar profile supplied by the user](https://scholar.google.com/citations?user=yeD9RRkAAAAJ&hl=en): linked directly. Automated access was rate-limited, so publication content was verified through the papers, DOI records, and local bibliography instead. No citation counts were inferred.
+- Published CV: the user explicitly selected `Resume_DenisaQosja.pdf` on November 24, 2026. The file is copied byte-for-byte to `assets/Denisa-Qosja-CV.pdf`, replacing the earlier generated public CV.
 - Portrait: user’s local professional CV photograph, resized and cropped for the site.
 
 ## Publications

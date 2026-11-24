@@ -38,12 +38,12 @@ Publishing setup follows [GitHub’s Pages documentation](https://docs.github.co
 
 After editing, run the build and check commands. Push source changes to `main`; the workflow generates the published HTML. Generated `dist/` and temporary files are ignored by Git.
 
-The CV PDF is committed as an asset so GitHub does not need a LaTeX installation. To update the PDF from the same profile and publication JSON, run `python3 scripts/build_cv.py` with `pdflatex` and standard LaTeX packages available, then rebuild the website. Review both PDF pages after regeneration.
+The published CV is the exact PDF explicitly selected by the user: `Resume_DenisaQosja.pdf`, copied to `assets/Denisa-Qosja-CV.pdf` without rewriting or reformatting. To update it, replace that asset with the user’s chosen PDF and rebuild the website. CV links include a content version so browsers load the replacement immediately. The older `scripts/build_cv.py` generator is not part of the publishing workflow and should not be used to replace this supplied PDF.
 
 The optional `scripts/generate_figures.py` regenerates original research diagrams and charts using NumPy and Matplotlib. Figure generation is not needed for normal site builds or deployment.
 
 ## Content and verification
 
-See [SOURCES.md](SOURCES.md) for provenance and figure interpretation. Professional history was drafted from the local English CV dated March 2026 and cross-checked against the public ORCID record. Review the current affiliation, dates, and contact details when updating the site. The public PDF is a newly typeset version: it omits residential address, phone number, and references’ contact information.
+See [SOURCES.md](SOURCES.md) for provenance and figure interpretation. Professional history was drafted from the local English CV dated March 2026 and cross-checked against the public ORCID record. Review the current affiliation, dates, and contact details when updating the site. The published PDF was subsequently replaced with the exact current file explicitly supplied by the user; it is separate from the website’s profile data.
 
 The integrity check verifies local resources, fragment links, page landmarks, image descriptions, SVG parsing, bibliography output, and PDF presence. Browser-based desktop/mobile visual verification was unavailable in the authoring session. Responsive rules are included; inspect the pages on desktop and mobile before the first public release.

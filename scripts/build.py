@@ -15,6 +15,8 @@ p, pubs, projects = read('profile'), read('publications'), read('projects')
 def e(s):
     return html.escape(str(s), quote=True)
 def link(url, label, cls='', new_tab=False):
+    if url == 'assets/Denisa-Qosja-CV.pdf':
+        url += '?v=' + asset_version(url)
     attributes = ' target="_blank" rel="noopener noreferrer"' if new_tab else ''
     hint = '<span class="sr-only"> (opens in a new tab)</span>' if new_tab else ''
     return f'<a class="{cls}" href="{e(url)}"{attributes}>{e(label)}{hint}</a>'
@@ -25,6 +27,8 @@ def profile_icon(url, label, new_tab=False):
     path = 'assets/icons/' + filenames[label] + '.svg'
     hint = ' (PDF, opens in a new tab)' if label == 'CV' else ''
     attributes = ' target="_blank" rel="noopener noreferrer"' if new_tab else ''
+    if label == 'CV':
+        url += '?v=' + asset_version(url)
     return f'<a class="profile-resource" href="{e(url)}" aria-label="{e(label + hint)}" title="{e(label + hint)}"{attributes}><img src="{path}?v={asset_version(path)}" width="24" height="24" alt="" aria-hidden="true"></a>'
 def tags(items):
     return '<ul class="tags">' + ''.join(f'<li>{e(x)}</li>' for x in items) + '</ul>'
